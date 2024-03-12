@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey form for "App" mobile application users.</p>
+    <div>
+    <form id="survey-form">
+
+      <fieldset>
+      <label id="name-label">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required />
+      <label id="email-label">Email</label>
+      <input id="email" name="email" type="email" placeholder="Your email" required />
+      <label id="number-label">Survey ID</label>
+      <input id="number" name="number" type="number" pattern="[0-9]{5}" min="0" max="100" placeholder="Your survey ID"/>
+      </fieldset>
+
+      <fieldset>
+      <label>What "App" account do you use?</label>
+      <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" value="personal"/> Personal account</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" value="business"/> Business account</label>
+        <label for="no-account"><input id="no-account" type="radio" name="account-type" class="inline" value="no"/> Prefer not to answer</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="dropdown">How often do you use "App"?</label>
+        <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Daily</option>
+            <option value="2">Weekly</option>
+            <option value="3">Monthly</option>
+            <option value="4">Yearly</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+        <label>How did you find out about "App" (you can select multiple)?</label>
+        <label for="search-engine"></label>
+        <input id="search-engine" type="checkbox" name="search-engine" class="inline"  value="search-engine"/> Search engine
+        <label for="internet-ad"></label>
+        <input id="internet-ad" type="checkbox" name="internet-ad" class="inline"  value="internet-ad"/> Internet ad
+        <label for="social-media"></label>
+        <input id="social-media" type="checkbox" name="social-media" class="inline"  value="social-media"/> Social media
+        <label for="customer-review-site"></label>
+        <input id="customer-review-site" type="checkbox" name="customer-review-site" class="inline"  value="newsletter"/> Customer review site   
+        <label for="referral"></label>  
+        <input id="referral" type="checkbox" name="referral" class="inline"  value="referral"/> Referral     
+      </fieldset>
+
+      <fieldset>
+      <label for="comments">Any additional comments for "App"?
+      <textarea id="comments" name="comments" rows="3" cols="10" placeholder="Enter your comments here..."></textarea>
+        </label>
+        <label for="tac"></label>
+          <input id="tac" type="checkbox" required name="tac" class="inline" value="tac"/> I accept the <a href="#">terms and conditions</a>
+      </fieldset>
+      <button type="submit" id="submit" /><a href="#">Submit</a></button>
+    </form>
+    </div>
+</body>
+</html>
